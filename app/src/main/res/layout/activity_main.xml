@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/headerred"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:weightSum="1"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="27sp"
+            android:paddingTop="17dp"
+            android:textColor="#FFF"
+            android:layout_height="0dp"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Estancia Soccer League"
+            android:id="@+id/headerepl"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.82" />
+    </LinearLayout>
+
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tableLayout"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:text=" Team    "
+                android:textStyle="bold"
+                android:id="@+id/col1" />
+
+            <TextView
+                android:layout_width="25sp"
+                android:layout_height="wrap_content"
+                android:text="P"
+                android:textStyle="bold"
+                android:id="@+id/col2" />
+
+            <TextView
+                android:layout_width="25sp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="W"
+                android:id="@+id/col3won"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="25sp"
+                android:layout_height="wrap_content"
+                android:text="D"
+                android:textStyle="bold"
+                android:id="@+id/col4drawn" />
+
+            <TextView
+                android:layout_width="25sp"
+                android:layout_height="wrap_content"
+                android:text="L"
+                android:textStyle="bold"
+                android:id="@+id/col5lost" />
+
+            <TextView
+                android:layout_width="30sp"
+                android:layout_height="wrap_content"
+                android:text="GF "
+                android:textStyle="bold"
+                android:id="@+id/col6gf" />
+
+            <TextView
+                android:layout_width="30sp"
+                android:layout_height="wrap_content"
+                android:text="GA "
+                android:textStyle="bold"
+                android:id="@+id/col7ga" />
+
+            <TextView
+                android:layout_width="30sp"
+                android:layout_height="wrap_content"
+                android:text="GD "
+                android:textStyle="bold"
+                android:id="@+id/col8gd" />
+
+            <TextView
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:text="Pts"
+                android:textStyle="bold"
+                android:id="@+id/col9points" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView" />
+        </TableRow>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableLayout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:weightSum="1"
+            android:id="@+id/tableRow">
+
+            <TextView
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/colteams" />
+
+            <TextView
+                android:layout_width="25sp"
+                android:layout_height="match_parent"
+                android:id="@+id/colplayed" />
+
+            <TextView
+                android:layout_width="25sp"
+                android:layout_height="match_parent"
+                android:id="@+id/colwon" />
+
+            <TextView
+                android:layout_width="25sp"
+                android:layout_height="match_parent"
+                android:id="@+id/coldrawn" />
+
+            <TextView
+                android:layout_width="25sp"
+                android:layout_height="match_parent"
+                android:id="@+id/collost" />
+
+            <TextView
+                android:layout_width="30sp"
+                android:layout_height="match_parent"
+                android:id="@+id/colgf" />
+
+            <TextView
+                android:layout_width="30sp"
+                android:layout_height="match_parent"
+                android:id="@+id/colga" />
+
+            <TextView
+                android:layout_width="30sp"
+                android:layout_height="match_parent"
+                android:id="@+id/colgd" />
+
+            <TextView
+                android:layout_width="40sp"
+                android:layout_height="match_parent"
+                android:id="@+id/colpoints" />
+
+        </TableRow>
+        </ScrollView>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="false"
+        android:gravity="bottom">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Group A"
+            android:id="@+id/button2"
+            android:onClick="openLeagueTable"
+            android:textColor="@color/orange"
+            android:background="?attr/colorPrimary"
+            android:drawableTop="@drawable/leaguetable"
+            android:layout_alignTop="@+id/button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Group B"
+            android:id="@+id/button3"
+            android:textColor="@color/orange"
+            android:background="?attr/colorPrimary"
+            android:drawableTop="@drawable/leaguetable"
+            android:onClick="openLeagueTable2"
+            android:layout_alignTop="@+id/button2"
+            android:layout_toRightOf="@+id/button2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scorers"
+            android:textColor="@color/orange"
+            android:background="?attr/colorPrimary"
+            android:drawableTop="@drawable/scorers"
+            android:id="@+id/button"
+            android:layout_below="@+id/linearLayout"
+            android:onClick="openScorers"
+            android:layout_toRightOf="@+id/button3"
+            android:layout_toLeftOf="@+id/fixtures"
+            android:layout_toStartOf="@+id/fixtures" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fixtures"
+            android:textColor="@color/orange"
+            android:drawableTop="@drawable/fixtures"
+            android:background="?attr/colorPrimary"
+            android:id="@+id/fixtures"
+            android:onClick="openFixtures"
+            android:layout_alignTop="@+id/button"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+

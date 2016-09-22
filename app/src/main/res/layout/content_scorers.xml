@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg2"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_scorers"
+    tools:context="com.example.raghav.estanciapremierleague.Scorers">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/headerred"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:weightSum="1"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="27sp"
+            android:paddingTop="17dp"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:layout_height="0dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Estancia Soccer League"
+            android:id="@+id/headerepl"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.82" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ll"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Group A"
+            android:textColor="@color/orange"
+            android:drawableTop="@drawable/leaguetable"
+            android:background="?attr/colorPrimary"
+            android:id="@+id/button4"
+            android:onClick="openLeagueTable"
+            android:layout_alignTop="@+id/button6"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/leaguetable"
+            android:text="Group B"
+            android:textColor="@color/orange"
+            android:background="?attr/colorPrimary"
+            android:id="@+id/button5"
+            android:onClick="openLeagueTable2"
+            android:layout_alignTop="@+id/button4"
+            android:layout_toRightOf="@+id/button4" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/scorers"
+            android:text="Scorers"
+            android:textColor="@color/orange"
+            android:background="?attr/colorPrimary"
+            android:id="@+id/button6"
+            android:layout_below="@+id/linearLayout"
+            android:layout_toRightOf="@+id/button5"
+            android:layout_toLeftOf="@+id/button7"
+            android:layout_toStartOf="@+id/button7" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/fixtures"
+            android:text="Fixtures"
+            android:textColor="@color/orange"
+            android:background="?attr/colorPrimary"
+            android:id="@+id/button7"
+            android:onClick="openFixtures"
+            android:layout_alignTop="@+id/button6"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tableLayout2"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginBottom="50dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="130sp"
+                android:layout_height="wrap_content"
+                android:text="  Name"
+                android:textStyle="bold"
+                android:id="@+id/col1name" />
+
+            <TextView
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:text="Team"
+                android:textStyle="bold"
+                android:id="@+id/col2team" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Goals"
+                android:textStyle="bold"
+                android:id="@+id/col3goals" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2" />
+        </TableRow>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView" >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="130sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/colname" />
+
+                <TextView
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/colteam" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/colgoals" />
+
+            </TableRow>
+        </ScrollView>
+
+    </TableLayout>
+
+
+</RelativeLayout>

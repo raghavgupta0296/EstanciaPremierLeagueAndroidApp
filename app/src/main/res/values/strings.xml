@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Estancia Soccer League</string>
+    <string name="n">Ultim</string>
+    <string name="title_activity_scorers">Scorers</string>
+    <string name="title_activity_fixtures">Fixtures</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_update_db">UpdateDB</string>
+</resources>

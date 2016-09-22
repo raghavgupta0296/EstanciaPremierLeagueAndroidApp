@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_update_db"
+    tools:context="com.example.raghav.estanciapremierleague.UpdateDB">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add another result"
+        android:id="@+id/DBaar"
+        android:onClick="aarclick"
+        android:layout_alignTop="@+id/clear"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="13sp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/clear"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/DBaar"
+        android:layout_toEndOf="@+id/DBaar"
+        android:textSize="13sp"
+        android:onClick="clickclear"
+        android:layout_toStartOf="@+id/DBaf" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add &amp; Finish"
+        android:id="@+id/DBaf"
+        android:onClick="afclick"
+        android:layout_alignTop="@+id/clear"
+        android:layout_alignRight="@+id/scrollView2"
+        android:layout_alignEnd="@+id/scrollView2"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date  : "
+        android:id="@+id/DBdate"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="23dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/DBeditdate"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/DBdate"
+        android:layout_alignLeft="@+id/DBedittime"
+        android:layout_alignStart="@+id/DBedittime"
+        android:inputType="text"
+        android:hint="Eg. : 1 Jan or 1.1.16" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time : "
+        android:id="@+id/DBtime"
+        android:layout_below="@+id/DBeditdate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="23dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/DBedittime"
+        android:layout_alignTop="@+id/DBtime"
+        android:layout_toRightOf="@+id/vs"
+        android:layout_toEndOf="@+id/vs"
+        android:hint="Eg. : 7 pm" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FIXTURE"
+        android:textStyle="bold"
+        android:id="@+id/fixture"
+        android:textSize="25dp"
+        android:layout_below="@+id/DBedittime"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DBteam1"
+        android:layout_below="@+id/fixture"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/DBaf"
+        android:layout_alignRight="@+id/clear"
+        android:layout_alignEnd="@+id/clear" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DBscore1"
+        android:layout_alignTop="@+id/DBteam1"
+        android:layout_toRightOf="@+id/DBscore2"
+        android:layout_alignLeft="@+id/DBscore2"
+        android:layout_alignStart="@+id/DBscore2"
+        android:inputType="number"
+        android:hint="Score"
+        android:layout_alignRight="@+id/DBscore2"
+        android:layout_alignEnd="@+id/DBscore2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VS"
+        android:id="@+id/vs"
+        android:textSize="21dp"
+        android:layout_toRightOf="@+id/DBtime"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/fixture" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DBteam2"
+        android:layout_below="@+id/vs"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/DBaf"
+        android:layout_alignRight="@+id/DBteam1"
+        android:layout_alignEnd="@+id/DBteam1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DBscore2"
+        android:layout_below="@+id/vs"
+        android:layout_alignRight="@+id/DBedittime"
+        android:layout_alignEnd="@+id/DBedittime"
+        android:inputType="number"
+        android:hint="Score" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SCORERS"
+        android:id="@+id/scorers"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/DBscore2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2"
+        android:layout_below="@+id/scorers"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/DBaar">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:id="@+id/linearlayout4"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.58">
+
+                <EditText
+                    android:layout_width="129dp"
+                    android:layout_height="52dp"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/DBscorer"
+                    android:layout_below="@+id/scorers"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:hint="Enter Name" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/DBscorergoals"
+                    android:hint="Goals"
+                    android:inputType="number" />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/DBteamscorer" />
+
+            </LinearLayout>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:id="@+id/DBaddname"
+                android:layout_alignTop="@+id/DBscorer"
+                android:layout_toRightOf="@+id/DBteam1"
+                android:layout_toEndOf="@+id/DBteam1"
+                android:textStyle="bold"
+                android:layout_gravity="right" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
